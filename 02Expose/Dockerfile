@@ -6,3 +6,5 @@ LABEL       Owner="ZelarSoft" \
             Maintainer="DevOps Team"\
             ProjectName="Docker"
 EXPOSE      80/tcp
+ENV         URL=google.com
+ENV         PROJECT=Demo
