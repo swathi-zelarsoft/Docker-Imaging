@@ -5,16 +5,22 @@ services:
     container_name: frontend
     ports:
       - 80:80
+    depends_on:
+      - todo
+      - login
   login:
     image:
-      container_name: login
+    container_name: login
+    depends_on:
+      - users
   users:
      image:
      container_name: users
-
   todo:
     image:
-   container_name: todo
+    container_name: todo
+    depends_on:
+      - redis
   redis:
     image: redis
     container_name:
