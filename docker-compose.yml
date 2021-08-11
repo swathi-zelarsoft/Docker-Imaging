@@ -9,18 +9,18 @@ services:
       - todo
       - login
   login:
-    image:
+    image: 370312947008.dkr.ecr.us-east-1.amazonaws.com/login:0.0.7
     container_name: login
     depends_on:
       - users
   users:
-     image:
+     image: 370312947008.dkr.ecr.us-east-1.amazonaws.com/users:0.0.2
      container_name: users
   todo:
-    image:
+    image: 370312947008.dkr.ecr.us-east-1.amazonaws.com/todo:0.0.6
     container_name: todo
     depends_on:
       - redis
   redis:
     image: redis
-    container_name:
+    container_name: redis
