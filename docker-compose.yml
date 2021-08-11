@@ -11,14 +11,20 @@ services:
   login:
     image: 370312947008.dkr.ecr.us-east-1.amazonaws.com/login:0.0.7
     container_name: login
+    ports:
+      - 8081:8080
     depends_on:
       - users
   users:
      image: 370312947008.dkr.ecr.us-east-1.amazonaws.com/users:0.0.2
      container_name: users
+     ports:
+       - 8081:8080
   todo:
     image: 370312947008.dkr.ecr.us-east-1.amazonaws.com/todo:0.0.6
     container_name: todo
+    ports:
+      - 8081:8080
     depends_on:
       - redis
   redis:
