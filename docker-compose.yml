@@ -9,7 +9,7 @@ services:
       - todo
       - login
   login:
-    image: 370312947008.dkr.ecr.us-east-1.amazonaws.com/login:0.0.8
+    image: 370312947008.dkr.ecr.us-east-1.amazonaws.com/login:0.0.9
     container_name: login
     expose:
       - 8080
