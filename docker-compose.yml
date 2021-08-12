@@ -21,7 +21,7 @@ services:
      expose:
        - 8080
   todo:
-    image: 370312947008.dkr.ecr.us-east-1.amazonaws.com/todo:0.0.6
+    image: 370312947008.dkr.ecr.us-east-1.amazonaws.com/todo:0.0.8
     container_name: todo
     expose:
       - 8080
